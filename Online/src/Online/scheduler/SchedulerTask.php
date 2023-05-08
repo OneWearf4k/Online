@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Online\scheduler;
 
 use Online\Utils\Utils;
