@@ -19,7 +19,7 @@ class Main extends PluginBase{
     public function onEnable() : Void
     {
         self::$instance = $this;
-        Server::getInstance()->getScheduler()->scheduleDelayedTask(new SchedulerTask(self::$instance), 1);
+        Server::getInstance()->getScheduler()->scheduleDelayedTask(new SchedulerTask(self::$instance), 20);
         $this->info();
     }
 
