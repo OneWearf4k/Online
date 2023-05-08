@@ -11,7 +11,7 @@ use pocketmine\Server;
 
 use Online\scheduler\SchedulerTaskTask;
 
-class Main extends PluginBase implements Listener{
+class Main extends PluginBase{
 
     /** @var getInstance */
     public static $instance;
