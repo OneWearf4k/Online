@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Online;
 
 use Online\scheduler\SchedulerTask;
@@ -11,16 +13,17 @@ use Online\scheduler\SchedulerTaskTask;
 
 class Main extends PluginBase implements Listener{
 
+    /** @var getInstance */
     public static $instance;
 
-    function onEnable()
+    public function onEnable() : Void
     {
         self::$instance = $this;
         Server::getInstance()->getScheduler()->scheduleDelayedTask(new SchedulerTask(self::$instance), 1);
         $this->info();
     }
 
-    function info(){
+    public function info(){
         Server::getInstance()->getLogger()->notice('
     
     Plugin by talk.24serv.pro
@@ -29,10 +32,10 @@ class Main extends PluginBase implements Listener{
     }
 
     /**
-     * @param getInstance
+     * @return getInstance
      **/
 
-    public static function getInstance(){
+    public static function getInstance() : Main{
         return self::$instance;
     }
 }
