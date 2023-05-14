@@ -14,7 +14,7 @@ use Online\scheduler\SchedulerTaskTask;
 class Main extends PluginBase{
 
     /** @var getInstance */
-    public static $instance;
+    private static $instance;
 
     public function onEnable() : Void
     {
